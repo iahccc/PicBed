@@ -1,5 +1,9 @@
+#!/bin/bash
+
 basePath="/home/iahc/图片/PicBed/"
 baseUrl="https://cdn.jsdelivr.net/gh/iahccc/PicBed/"
+
+cd $basePath
 
 status=`git status`
 
