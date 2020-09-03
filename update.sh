@@ -2,8 +2,12 @@ basePath="/home/iahc/图片/PicBed/"
 baseUrl="https://cdn.jsdelivr.net/gh/iahccc/PicBed/"
 
 status=`git status`
-substr=${status#*内容）}
+
+#if [[ ! $status =~ "删除" ]]
+#then
+substr=${status##*以包含要提交的内容）}
 substr=${substr%提交*}
+substr=${substr%修改尚未加入提交*}
 
 array=(`echo $substr`)
 
@@ -21,3 +25,4 @@ git commit -m 'update'
 git push origin
 
 echo -e $result
+
