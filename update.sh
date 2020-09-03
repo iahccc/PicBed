@@ -23,6 +23,7 @@ then
     git commit -m 'update'
     git push origin
     
+    echo "======================================"
     echo -e $result
 
 else
