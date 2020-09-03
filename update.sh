@@ -28,7 +28,7 @@ then
     git push origin
     
     echo "======================================"
-    echo $result
+    echo -e $result
 
 else
     git pull origin
