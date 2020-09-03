@@ -6,11 +6,10 @@ status=`git status`
 if [[ $status =~ "以包含要提交的内容）" ]]
 then
     substr=${status##*以包含要提交的内容）}
-    substr=${substr%提交*}
-    substr=${substr%修改尚未加入提交*}
+    substr=${substr%提交为空*}
+    substr=${substr%修改尚未加入*}
     
     array=(`echo $substr`)
-    
     result=''
     for i in ${!array[@]}
     do
